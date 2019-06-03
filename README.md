@@ -7,3 +7,5 @@ Getting started with Python
 Arvin Gatela
 
 # learning about git changes and commits
+
+Insert mode(press i then escape to quit insert mode)

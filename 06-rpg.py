@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """Author ACAGatela || Lab for List and Dict Modelling"""
 
-# dictionary linking a room to other rooms
 
 def showInstructions():
     # print a main and the commands
@@ -28,7 +27,7 @@ def showStatus():
 inventory = []
 
 # a dictionary linking a room to other rooms
-rooms = {'Hall' : {'south' : 'Kitchen'}, 'Kitchen' : {'north' : 'Hall'}}
+rooms = {'Hall' : {'south' : 'Kitchen', 'east' : 'Dining Room', 'item' : 'key'}, 'Kitchen' : {'north' : 'Hall', 'item' : 'monster'}, 'Dining Room' : {'west' : 'Hall', 'item' : 'potion', 'south' : 'Garden'}, 'Garden' : {'north' : 'Dining Room'}}
 
 # start the player in the hall
 currentRoom= 'Hall'
@@ -73,4 +72,12 @@ while True:
             #tell them they can't get it
             print('Can\'t get ' + move[1] + '!')
 
+    #if a player enters a room with a monster
+    if 'item' in rooms[currentRoom] and 'monster' in rooms[currentRoom]['item']:
+        print('A monster has got you... GAME OVER!')
+        break
 
+    #define how a player can win
+    if currentRoom == 'Garden' and 'key' in inventory and 'potion' in inventory:
+        print('You escaped the house with the ultra rare key and magic potion... YOU WIN!')
+        break

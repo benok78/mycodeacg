@@ -7,6 +7,8 @@ def showInstructions():
     print('''
     RPG Game
     ========
+    WIN the game by getting to the Garden with a key and a potion.
+    Avoid the monster, but you can defeat the monster with a potion.
     Commands:
       go [direction]
       get [item]
@@ -27,7 +29,7 @@ def showStatus():
 inventory = []
 
 # a dictionary linking a room to other rooms
-rooms = {'Hall' : {'south' : 'Kitchen', 'east' : 'Dining Room', 'item' : 'key'}, 'Kitchen' : {'north' : 'Hall', 'item' : 'monster'}, 'Dining Room' : {'west' : 'Hall', 'item' : 'potion', 'south' : 'Garden'}, 'Garden' : {'north' : 'Dining Room'}}
+rooms = {'Hall' : {'south' : 'Kitchen', 'east' : 'Dining Room', 'item' : 'key', 'north' : 'Living Room'}, 'Kitchen' : {'north' : 'Hall', 'item' : 'monster'}, 'Dining Room' : {'west' : 'Hall', 'item' : 'potion', 'south' : 'Garden'}, 'Garden' : {'north' : 'Dining Room'}, 'Living Room' : {'south' : 'Hall'}}
 
 # start the player in the hall
 currentRoom= 'Hall'

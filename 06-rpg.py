@@ -44,6 +44,7 @@ while True:
     # eg typing 'go east' would give the list:
     # ['go','east']
     move = ''
+    # while move = null, keep asking player for input:wq
     while move == '':
         move = input('>')
 

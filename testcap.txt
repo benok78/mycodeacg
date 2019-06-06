@@ -1,0 +1,4 @@
+Call me Ishmael.
+Some years ago-- never mind how long precisely...
+Contact: sip:+17174608096@[2006::38:98::03:a1]:5060;other=garbage;evenmore=stuff;3gpp=en,fr
+End of transmission
